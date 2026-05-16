@@ -23,7 +23,16 @@
 /* last me hta denge border ko  */
 
 .header{
-    border: 2px solid rgb(121, 86, 86);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(132, 114, 114, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(193, 177, 177, 0.3);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    
 }
 
 body{
@@ -31,6 +40,15 @@ body{
     height: 100vh;
     text-align: center;
     background-color: var(--background-color);
+    padding-top: 130px;
+
+
+}
+
+@media screen and (max-width:745px) {
+    body{
+        margin: 40px;
+    }
 }
 
 
@@ -290,7 +308,7 @@ body{
     border: none;
     border-radius: 0.625rem;
     margin-top: 2%;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
     padding: 1.5rem 2.5rem;
     
 }
@@ -321,5 +339,125 @@ body{
     }
 }
 
+/* for card section  */
 
+
+.feature-container{
+    background-color:var(--light-gray);
+    padding: 2.5rem 0;
+    text-align: center;
+
+}
+
+.feature-content{
+    max-width:800px;
+    margin: 0 auto;  /*for item placed in center*/
+    padding: 0 2rem;
+}
+
+.main-info{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.main-title{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.main-description{
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1.3rem;
+    
+}
+
+
+
+/* card single column me ho jaye if size is < 767 px  */
+@media screen and (max-width:767px) {
+    .feature-grid{
+        grid-template-columns: repeat(1, 1fr);
+        
+
+    }
+}
+
+/* for card image  */
+
+.feature-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8e9dbc;
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+} 
+
+.icon-container{
+    background-color: var(--background-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    /* icon ko center me lane liye parent me ye krna pdta hai  */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.feature-svg{
+    width:1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    
+}
+
+.feature-title{
+    color: white;
+    margin: 0.3rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.feature-description{
+    color: white;
+}
+
+/* for card background color */
+
+.feature-card:nth-child(2) {
+    background-color: rgb(231, 178, 178);
+}
+
+.feature-card:nth-child(3) {
+    background-color: rgb(161, 211, 123);
+}
+
+.feature-card:nth-child(4) {
+    background-color: rgb(121, 122, 116);
+}
+
+.feature-card:nth-child(5) {
+    background-color: rgb(170, 219, 192);
+}
+
+.feature-card:nth-child(6) {
+    background-color: rgb(176, 149, 230);
+}
+
+.feature-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
